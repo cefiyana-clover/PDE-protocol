@@ -38,25 +38,35 @@ pip install numpy pandas scipy matplotlib networkx
 
 # Neuroinformatics interfaces
 pip install nilearn abagen
+```
 
 ## Methodological Boundaries and Explicit Assumptions
-​To ensure rigorous interpretation within the limits of computational biology, users of this protocol must acknowledge the following boundary conditions:
-* ​Topological Limitations: The mathematical clearance capacity is strictly bounded. The model only operates up to the point of a theoretical Saddle-Node Bifurcation (ATP < 0.5 mM). It does not model cellular necrosis, apoptosis, or elastic rescue mechanisms post-bifurcation.
-​* System Isolation: The reaction-diffusion framework explicitly isolates localized thermodynamic variables. It inherently excludes concurrent neuroendocrine feedback loops (e.g., HPA axis dynamics) and systemic inflammatory cascade effects.
-* ​Transcriptomic Assumptions: The architecture parsimoniously assumes that regional mRNA expression correlates linearly with functional enzyme kinetics (V_{MAX}) at the astrocytic membrane, obscuring complex in vivo parameters such as localized cellular density and glial-neuronal stoichiometric ratios.
-* ​AHBA Donor Cohort: The spatial parameters are derived from the AHBA, which utilizes a highly restricted donor cohort (N=6, predominantly Caucasian demographics). Extrapolating these spatial vectors to pan-ancestry population variances carries inherent structural biases.
 
-## ​Reproducibility and Usage
-​To reproduce the simulated spatiotemporal trajectory (as detailed in the manuscript's primary figures):
-1. ​Ensure all dependencies are installed.
-2. ​Execute the primary PDE execution script.
-3. ​The console will output the terminal state analysis across the seed node (Node 0), adjacent nodes, and the most distal connectome node (Node 147), identifying whether the excitotoxic wave mathematically breached the bifurcation threshold.
-​Note: Initializing the AHBA microarray extraction requires significant memory and may take several minutes to download localized gene expression data.
-## ​Future Directions: The Stochastic Expansion
-​The current codebase is deterministic. As outlined in the primary manuscript (Appendix A), future iterations of the ISB protocol will transcend these absolute boundaries by integrating Stochastic Differential Equations (SDEs) and Langevin dynamics. This expansion will model biological noise derived from continuous functional 1H-MRS, enabling the quantification of Critical Slowing Down prior to terminal collapse.
-## ​License
-​This research code is distributed under a Creative Commons Attribution-NonCommercial (CC BY-NC 4.0) license. It is openly accessible for academic review, replication, and non-commercial theoretical expansion.
-## ​Contact
-​For methodological inquiries or collaborative empirical validation utilizing in vivo neurometabolic imaging:
-* ​Author: Cefiyana
-* ​Email: leafcloverfive@gmail.com
+To ensure rigorous interpretation within the limits of computational biology, users of this protocol must acknowledge the following boundary conditions:
+
+* **Topological Limitations:** The mathematical clearance capacity is strictly bounded. The model only operates up to the point of a theoretical **Saddle-Node Bifurcation** (ATP < 0.5 mM). It does not model cellular necrosis, apoptosis, or elastic rescue mechanisms post-bifurcation.
+* **System Isolation:** The reaction-diffusion framework explicitly isolates localized thermodynamic variables. It inherently excludes concurrent neuroendocrine feedback loops (e.g., HPA axis dynamics) and systemic inflammatory cascade effects.
+* **Transcriptomic Assumptions:** The architecture parsimoniously assumes that regional mRNA expression correlates linearly with functional enzyme kinetics ($V_{MAX}$) at the astrocytic membrane, obscuring complex *in vivo* parameters such as localized cellular density and glial-neuronal stoichiometric ratios.
+* **AHBA Donor Cohort:** The spatial parameters are derived from the AHBA, which utilizes a highly restricted donor cohort (N=6, predominantly Caucasian demographics). Extrapolating these spatial vectors to pan-ancestry population variances carries inherent structural biases.
+
+## Reproducibility and Usage
+
+To reproduce the simulated spatiotemporal trajectory (as detailed in the manuscript's primary figures):
+
+1. Ensure all dependencies are installed.
+2. Execute the primary PDE execution script.
+3. The console will output the terminal state analysis across the seed node (Node 0), adjacent nodes, and the most distal connectome node (Node 147), identifying whether the excitotoxic wave mathematically breached the bifurcation threshold.
+
+*Note: Initializing the AHBA microarray extraction requires significant memory and may take several minutes to download localized gene expression data.*
+
+## Future Directions: The Stochastic Expansion
+
+The current codebase is deterministic. As outlined in the primary manuscript (Appendix A), future iterations of the ISB protocol will transcend these absolute boundaries by integrating Stochastic Differential Equations (SDEs) and Langevin dynamics. This expansion will model biological noise derived from continuous functional 1H-MRS, enabling the quantification of *Critical Slowing Down* prior to terminal collapse.
+
+## License
+This research code is distributed under a **Creative Commons Attribution-NonCommercial (CC BY-NC 4.0)** license. It is openly accessible for academic review, replication, and non-commercial theoretical expansion.
+
+## Contact
+For methodological inquiries or collaborative empirical validation utilizing *in vivo* neurometabolic imaging:
+* **Author:** Cefiyana
+* **Email:** leafcloverfive@gmail.com
